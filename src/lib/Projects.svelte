@@ -8,8 +8,8 @@
         },
         {
             "title": "Portfolio",
-            "github": "",
-            "link": "",
+            "github": "https://github.com/AlexGioffDev/Portfolio",
+            "link": "https://portfolio-khaki-iota-88.vercel.app/",
             "tec": ["Svelte"]
         }
     ]
