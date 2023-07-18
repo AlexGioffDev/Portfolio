@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>Alex Gioffre' | Portfolio</title>
-	<meta name="description" content="Portfolio Alex Gioffre' - A javascript developer" />
+	<meta name="description" content="Portfolio Alex Gioffre' - A front-end and mobile developer" />
 </svelte:head>
 
 <Hero />

@@ -2,39 +2,47 @@
     let languages = [
         {
            "name": "HTML",
-           "percentuage": "100%"
+           "percentage": "100%"
         },
         {
             "name": "CSS",
-            "percentuage": "100%"
+            "percentage": "100%"
         },
         {
             "name": "JS",
-            "percentuage": "80%"
+            "percentage": "80%"
         },
         {
             "name": "Python",
-            "percentuage": "65%"
+            "percentage": "65%"
         },
         {
             "name": "React",
-            "percentuage": "90%"
+            "percentage": "90%"
         },
         {
             "name": "NextJS",
-            "percentuage": "60%"
+            "percentage": "60%"
         },
         {
             "name": "Bootstrap",
-            "percentuage": "100%"
+            "percentage": "100%"
         },
         {
             "name": "TailwindCSS",
-            "percentuage": "100%"
+            "percentage": "100%"
         },
         {
             "name": "Svelte",
-            "percentuage": "40%"
+            "percentage": "40%"
+        },
+        {
+            "name": "Swift",
+            "percentage": "40%"
+        },
+        {
+            "name": "iOS",
+            "percentage": "20%"
         }
     ]
 </script>
@@ -48,7 +56,7 @@
                 <div class="group-item">
                     <h1>{language.name}</h1>
                     <div class="bar-container">
-                        <div class="bar" style="width: {language.percentuage};" />
+                        <div class="bar" style="width: {language.percentage};" />
                     </div>
                 </div>
                 {/each}
@@ -114,7 +122,6 @@
 
     .group-item h1 {
         font-size: 2rem;
-        text-transform: uppercase;
     }
 
     .group-item .bar-container {
