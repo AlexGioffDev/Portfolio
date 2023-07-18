@@ -61,6 +61,7 @@
 <style>
     section {
         margin: 0;
+
         width: 100vw;
         background-color: var(--primary-color);
         min-height: 40rem;

@@ -10,9 +10,9 @@
 
 <style>
     .hero-section {
-        min-height: 30vh;
+        height: 100vdh;
         width: 100%;
-        padding: 20rem 3rem;
+        padding: 25rem 3rem;
     }
 
     .hero-container {
@@ -34,7 +34,9 @@
     }
 
     .element h1 {
-        font-size: 3.1rem;
+        font-size: 3.3rem;
+        max-width: 87%;
+        word-break: keep-all;
     }
 
     .element span {
@@ -42,20 +44,22 @@
     }
 
     .element p {
-        font-size: 1.5rem;
+        margin-top: 1rem;
+        font-size: 1.8rem;
         text-transform: uppercase;
         max-width: 80%;
-        text-align: justify;
-        line-height: 1.8rem;
+        line-height: 2rem;
         font-weight: 400;
     }
 
     @media (min-width: 768px){
         .hero-section {
+            height: 85vh;
             padding: 20rem 5rem 0rem 5rem;
         }
 
         .element h1 {
+            max-width: 100%;
             font-size: 5rem;
         }
 
