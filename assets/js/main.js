@@ -58,3 +58,28 @@ langButtons.forEach((element) => {
     }, 500);
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const charts = document.querySelectorAll(".donut-chart");
+
+  charts.forEach((chart) => {
+    const percent = chart.dataset.percent;
+    const fg = chart.querySelector(".donut-fg");
+    fg.style.setProperty("--percent", percent);
+
+    // Optional: animate when scrolled into view
+    const io = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((ent) => {
+          if (ent.isIntersecting) {
+            fg.classList.add("animate");
+            obs.unobserve(ent.target);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    io.observe(chart);
+  });
+});
