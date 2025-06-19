@@ -1,85 +1,19 @@
-let links = document.getElementsByClassName("link");
-let contents = document.getElementsByClassName("content-group");
-const langButtons = document.querySelectorAll(".buttons-container .btn");
-const aboutTexts = document.querySelectorAll(".about-texts .content-text");
+const headerNav = document.getElementById("header-nav");
+const buttonMenu = document.getElementById("buttonMenu");
+const linkButtons = document.getElementsByClassName("link-button");
+const html = document.getElementsByTagName("html");
 
-console.log({ aboutTexts });
-
-Array.from(links).forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    if (this.classList.contains("active")) return;
-
-    Array.from(links).forEach((l) => l.classList.remove("active"));
-    this.classList.add("active");
-
-    const targetId = this.getAttribute("href").replace("#", "");
-    const targetContent = document.getElementById(targetId);
-
-    Array.from(contents).forEach((c) => {
-      c.classList.remove("content-active");
-      c.classList.add("content-out");
-    });
-
-    setTimeout(() => {
-      Array.from(contents).forEach((c) => c.classList.remove("content-out"));
-      if (targetContent) {
-        targetContent.classList.add("content-active");
-      }
-    }, 500);
-  });
+buttonMenu.addEventListener("click", () => {
+  buttonMenu.classList.toggle("active");
+  headerNav.classList.toggle("active");
+  const isMenuActive = headerNav.classList.contains("active");
+  html[0].style.overflowY = isMenuActive ? "hidden" : "auto";
 });
 
-langButtons.forEach((element) => {
-  element.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    if (this.classList.contains("btn-active")) return;
-
-    langButtons.forEach((btn) => btn.classList.remove("btn-active"));
-
-    this.classList.add("btn-active");
-    let targetID = this.innerText.toLowerCase();
-    const targetContent = document.getElementById(targetID);
-
-    aboutTexts.forEach((about) => {
-      if (about.classList.contains("text-active")) {
-        about.classList.remove("text-active");
-        about.classList.add("text-out");
-      }
-    });
-
-    setTimeout(() => {
-      aboutTexts.forEach((about) => about.classList.remove("text-out"));
-      if (targetContent) {
-        targetContent.classList.add("text-active");
-      }
-    }, 500);
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const charts = document.querySelectorAll(".donut-chart");
-
-  charts.forEach((chart) => {
-    const percent = chart.dataset.percent;
-    const fg = chart.querySelector(".donut-fg");
-    fg.style.setProperty("--percent", percent);
-
-    // Optional: animate when scrolled into view
-    const io = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((ent) => {
-          if (ent.isIntersecting) {
-            fg.classList.add("animate");
-            obs.unobserve(ent.target);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
-
-    io.observe(chart);
+Array.from(linkButtons).forEach((button) => {
+  button.addEventListener("click", (e) => {
+    buttonMenu.classList.remove("active");
+    headerNav.classList.remove("active");
+    html[0].style.overflowY = "auto";
   });
 });

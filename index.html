@@ -14,127 +14,57 @@
   </head>
 
   <body class="container">
-    <header class="header">
-      <div class="header-text">
-        <h1>Alex Gioffre'</h1>
-        <h4>Developer | Italy</h4>
-      </div>
-    </header>
-    <nav class="nav">
-      <ul>
-        <li><a class="link" href="#about">About</a></li>
-        <li><a class="link active" href="#projects">Projects</a></li>
-      </ul>
-    </nav>
-
-    <main class="content">
-      <div class="content-group" id="about">
-        <div class="content-about">
-          <div class="buttons-container">
-            <button class="btn btn-active">IT</button>
-            <button class="btn">EN</button>
-            <button class="btn">ES</button>
-          </div>
-          <div class="about-texts">
-            <p id="it" class="content-text text-active">
-              Ciao! Sono uno sviluppatore front-end appassionato, con base in
-              Italia, orientato al codice pulito, alle interfacce creative e a
-              esperienze utente fluide. Realizzo applicazioni web moderne e
-              responsive, che non solo hanno un aspetto accattivante, ma
-              funzionano perfettamente su qualsiasi dispositivo. Ho competenze
-              in HTML, CSS e JavaScript, e esperienza con framework come React.
-              Do vita ai design con precisione e stile. Ho anche una buona
-              conoscenza del back-end, che mi consente di affrontare i progetti
-              in modo più completo e flessibile. Sono una persona curiosa per
-              natura e in continuo apprendimento. Mi piace esplorare nuove
-              tecnologie, affinare le mie competenze e trasformare idee
-              complesse in soluzioni digitali intuitive.
-            </p>
-            <p id="en" class="content-text">
-              Hi! I'm a passionate front-end developer based in Italy, dedicated
-              to clean code, creative interfaces, and smooth user experiences. I
-              build modern, responsive web applications that not only look great
-              but work seamlessly across all devices. I’m skilled in HTML, CSS,
-              and JavaScript, and experienced with frameworks like React. I
-              bring designs to life with precision and style. I also have a
-              solid understanding of back-end development, allowing me to
-              approach projects with a more complete and flexible perspective.
-              I'm naturally curious and always learning. I enjoy exploring new
-              technologies, refining my skills, and turning complex ideas into
-              intuitive digital solutions.
-            </p>
-            <p id="es" class="content-text">
-              ¡Hola! Soy un desarrollador front-end apasionado, con base en
-              Italia, dedicado al código limpio, las interfaces creativas y las
-              experiencias de usuario fluidas. Construyo aplicaciones web
-              modernas y adaptables, que no solo se ven bien, sino que también
-              funcionan perfectamente en cualquier dispositivo.Domino HTML, CSS
-              y JavaScript, y tengo experiencia con frameworks como React. Doy
-              vida a los diseños con precisión y estilo. Además, tengo
-              conocimientos de back-end que me permiten abordar proyectos de
-              manera más completa y versátil. Soy naturalmente curioso y estoy
-              en constante aprendizaje. Me gusta explorar nuevas tecnologías,
-              perfeccionar mis habilidades y convertir ideas complejas en
-              soluciones digitales intuitivas.
-            </p>
-          </div>
+    <header>
+      <nav role="navigation">
+        <div class="menu-toggle" id="buttonMenu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      </div>
-      <div class="content-group content-active" id="projects">
-        <div class="content-projects">
-          <h2 class="content-title">Projects</h2>
-          <section class="project-container">
-            <h3>FilmVerse</h3>
-            <div class="project-tech">
-              <p>REACT</p>
-              <p>API</p>
-              <p>TailwindCSS</p>
-            </div>
-            <div class="project-links">
-              <a
-                href="https://github.com/AlexGioffDev/FilmVerse"
-                class="project-link"
-                target="_blank"
-                >Github</a
-              >
-              <a
-                href="https://filmverse-tmdb.netlify.app"
-                class="project-link"
-                target="_blank"
-                >WebPage</a
-              >
-            </div>
+        <ul id="header-nav">
+          <li><a class="link-button" href="#about">About</a></li>
+          <li><a class="link-button" href="#projects">Projects</a></li>
+          <li><a class="link-button" href="#tools">Skills</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <h1>
+          Hello <br />
+          I'm <span>Alex</span>
+        </h1>
+        <p>
+          I’m a <span>developer</span> who loves crafting <br />
+          <span>user experiences</span> that delight and engage.
+        </p>
+        <img src="./assets/images/avatar.png" alt="avatar" />
+        <a class="down-btn" href="">⌄</a>
+      </section>
+      <section id="projects">
+        <h3 class="title-section">Here some projects</h3>
+        <div class="projects-container">
+          <div class="project-info">
+            <h2 class="project-title">FilmVerse</h2>
             <p class="project-description">
               FilmVerse is a simple and user-friendly movie discovery site built
               with React and TypeScript, using data from the TMDB API.
             </p>
-          </section>
-          <section class="project-container">
-            <h3>Project Niku</h3>
-            <div class="project-tech">
-              <p>Java</p>
-              <p>SpringBoot</p>
-              <p>Angular</p>
-              <p>TailwindCSS</p>
+            <div class="project-techs">
+              <p class="project-tech">React</p>
+              <p class="project-tech">TailwindCSS</p>
+              <p class="project-tech">TMDB-API</p>
+              <p class="project-tech">Typescript</p>
             </div>
             <div class="project-links">
-              <a
-                href="https://github.com/AlexGioffDev/project-niku"
-                class="project-link"
-                target="_blank"
-                >Github</a
-              >
+              <a target="_blank" class="project-link" href="">Github</a>
+              <a target="_blank" class="project-link" href="">Website</a>
             </div>
-            <p class="project-description">
-              BookReviewApp is a full-stack web application for managing and
-              reviewing books. Built with Angular on the front end and Java +
-              Spring Boot on the back end.
-            </p>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
-
+    <footer></footer>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
