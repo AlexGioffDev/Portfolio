@@ -165,7 +165,7 @@ main {
   margin-top: 8rem;
   display: flex;
   flex-direction: column;
-  gap: 12rem; /* About */
+  gap: 12rem;
 
   section#about {
     min-height: 75dvh;
@@ -179,27 +179,29 @@ main {
     transform: scale(0);
     animation: fade-in 1s 0.5s forwards;
 
-    h1 {
-      font-size: 2.8rem;
-      color: #27272a;
-      line-height: 5rem;
-      span {
-        background-color: var(--main-color);
-        color: #fdf0d5;
-        padding: 0.4rem;
-        text-transform: capitalize;
+    div.about-text {
+      h1 {
+        font-size: 2.8rem;
+        color: #27272a;
+        line-height: 5rem;
+        span {
+          background-color: var(--main-color);
+          color: #fdf0d5;
+          padding: 0.4rem;
+          text-transform: capitalize;
+        }
       }
-    }
 
-    p {
-      color: #27272a;
-      font-size: 1.8rem;
-      line-height: 4rem;
-      span {
-        position: relative;
-        background-color: var(--main-color);
-        padding: 0.4rem;
-        color: var(--background-color);
+      p {
+        color: #27272a;
+        font-size: 1.8rem;
+        line-height: 4rem;
+        span {
+          position: relative;
+          background-color: var(--main-color);
+          padding: 0.4rem;
+          color: var(--background-color);
+        }
       }
     }
 
@@ -221,6 +223,16 @@ main {
       animation: bounce 1.3s ease-in infinite;
       cursor: pointer;
     }
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .about-text {
+        flex: 1 0 45%;
+      }
+    }
   }
 
   /* Projects */
@@ -230,15 +242,25 @@ main {
     gap: 12px;
 
     h3.title-section {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       font-weight: 500;
       color: var(--main-color);
+      font-weight: 600;
     }
 
     .projects-container {
       display: flex;
       flex-direction: column;
       gap: 21px;
+
+      @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .project-info {
+          flex: 1 0 45%;
+        }
+      }
 
       .project-info {
         border-radius: 14px;
@@ -252,10 +274,14 @@ main {
         justify-content: center;
         gap: 14px;
         overflow: hidden;
+        position: relative;
+        &:nth-child(even) {
+          background-color: rgba(96, 108, 56, 0.8);
+        }
 
         .project-title {
           text-transform: uppercase;
-          font-size: 3rem;
+          font-size: 2.8rem;
           color: var(--main-color);
         }
 
@@ -268,6 +294,7 @@ main {
         .project-techs {
           display: flex;
           align-items: center;
+          justify-content: center;
           overflow-x: auto;
           gap: 10px;
           width: 90%;
@@ -276,7 +303,7 @@ main {
             background-color: var(--main-color);
             color: var(--background-color);
             padding: 0.5rem 1rem;
-            font-size: 1.1rem;
+            font-size: 1rem;
             border-radius: 1.4rem;
           }
         }
@@ -302,6 +329,66 @@ main {
           }
         }
       }
+    }
+  }
+
+  /* skills */
+  section#skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--main-color);
+      text-transform: uppercase;
+    }
+
+    .skills-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      p {
+        flex: 1 0 21%;
+        background-color: var(--main-color);
+        color: var(--background-color);
+        padding: 0.5rem 1rem;
+        text-align: center;
+        border-radius: 14px;
+        font-size: 1.3rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: var(--main-color);
+  padding: 4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    color: var(--background-color);
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
+
+  a.link-social {
+    color: var(--background-color);
+    font-size: 1.4rem;
+    transition: all 0.5s ease-in;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--background-color);
+      transition: all 0.5s ease-in;
     }
   }
 }

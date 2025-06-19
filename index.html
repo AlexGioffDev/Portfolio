@@ -24,22 +24,24 @@
         <ul id="header-nav">
           <li><a class="link-button" href="#about">About</a></li>
           <li><a class="link-button" href="#projects">Projects</a></li>
-          <li><a class="link-button" href="#tools">Skills</a></li>
+          <li><a class="link-button" href="#skills">Skills</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="about">
-        <h1>
-          Hello <br />
-          I'm <span>Alex</span>
-        </h1>
-        <p>
-          I’m a <span>developer</span> who loves crafting <br />
-          <span>user experiences</span> that delight and engage.
-        </p>
+        <div class="about-text">
+          <h1>
+            Hello <br />
+            I'm <span>Alex</span>
+          </h1>
+          <p>
+            I’m a <span>developer</span> who loves crafting <br />
+            <span>user experiences</span> that delight and engage.
+          </p>
+        </div>
         <img src="./assets/images/avatar.png" alt="avatar" />
-        <a class="down-btn" href="">⌄</a>
+        <div class="down-btn" id="scrollbutton">⌄</div>
       </section>
       <section id="projects">
         <h3 class="title-section">Here some projects</h3>
@@ -57,14 +59,167 @@
               <p class="project-tech">Typescript</p>
             </div>
             <div class="project-links">
-              <a target="_blank" class="project-link" href="">Github</a>
-              <a target="_blank" class="project-link" href="">Website</a>
+              <a
+                target="_blank"
+                class="project-link"
+                href="https://github.com/AlexGioffDev/FilmVerse"
+                >Github</a
+              >
+              <a
+                target="_blank"
+                class="project-link"
+                href="filmverse-tmdb.netlify.app"
+                >Website</a
+              >
+            </div>
+          </div>
+          <div class="project-info">
+            <h2 class="project-title">MusicDiscovery</h2>
+            <p class="project-description">
+              Music Discovery is a modern web app that lets users explore and
+              discover new music using the power of the Spotify API. With a
+              clean interface and preview capabilities, users can find artists,
+              albums, playlists, and listen to song snippets—all in one place
+            </p>
+            <div class="project-techs">
+              <p class="project-tech">NextJS</p>
+              <p class="project-tech">TailwindCSS</p>
+              <p class="project-tech">Spotify-API</p>
+              <p class="project-tech">LastFM-API</p>
+            </div>
+            <div class="project-links">
+              <a
+                target="_blank"
+                class="project-link"
+                href="https://github.com/AlexGioffDev/MusicDiscovery"
+                >Github</a
+              >
+              <a
+                target="_blank"
+                class="project-link"
+                href="music-discovery-coral.vercel.app"
+                >Website</a
+              >
+            </div>
+          </div>
+          <div class="project-info">
+            <h2 class="project-title">Hue Detective</h2>
+            <p class="project-description">
+              Hue Detective is a simple yet addictive color guessing game built
+              with Svelte and styled using Pico.css. A single color swatch
+              appears each round, and you must pick the correct hex code from
+              six options. How many can you guess in a row? Time to test your
+              color IQ!
+            </p>
+            <div class="project-techs">
+              <p class="project-tech">SvelteJS</p>
+              <p class="project-tech">Picocss</p>
+            </div>
+            <div class="project-links">
+              <a
+                target="_blank"
+                class="project-link"
+                href="https://github.com/AlexGioffDev/huedetective"
+                >Github</a
+              >
+              <a
+                target="_blank"
+                class="project-link"
+                href="huedetective.netlify.app/"
+                >Website</a
+              >
+            </div>
+          </div>
+          <div class="project-info">
+            <h2 class="project-title">Mikan</h2>
+            <p class="project-description">
+              MIKAN is a mobile app that allows you to browse and discover manga
+              using data from the Jikan API, a free and open-source REST API for
+              MyAnimeList.
+            </p>
+            <div class="project-techs">
+              <p class="project-tech">React-native</p>
+              <p class="project-tech">Jikan API</p>
+            </div>
+            <div class="project-links">
+              <a
+                target="_blank"
+                class="project-link"
+                href="https://github.com/AlexGioffDev/ManVautl"
+                >Github</a
+              >
+            </div>
+          </div>
+          <div class="project-info">
+            <h2 class="project-title">Project Niku</h2>
+            <p class="project-description">
+              BookReviewApp is a full-stack web application for managing and
+              reviewing books. Built with Angular on the front end and Java +
+              Spring Boot on the back end.
+            </p>
+            <div class="project-techs">
+              <p class="project-tech">SpringBoot</p>
+              <p class="project-tech">Angular</p>
+              <p class="project-tech">MySQL</p>
+            </div>
+            <div class="project-links">
+              <a
+                target="_blank"
+                class="project-link"
+                href="https://github.com/AlexGioffDev/project-niku"
+                >Github</a
+              >
+            </div>
+          </div>
+          <div class="project-info">
+            <h2 class="project-title">Password Generator</h2>
+            <p class="project-description">
+              a password generate made with Qt and c++
+            </p>
+            <div class="project-techs">
+              <p class="project-tech">C++</p>
+              <p class="project-tech">Qt6</p>
+            </div>
+            <div class="project-links">
+              <a
+                target="_blank"
+                class="project-link"
+                href="https://github.com/AlexGioffDev/password-generator"
+                >Github</a
+              >
             </div>
           </div>
         </div>
       </section>
+
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="skills-container">
+          <p>HTM</p>
+          <p>JS</p>
+          <p>CSS</p>
+          <p>C++</p>
+          <p>Java</p>
+          <p>Python</p>
+          <p>C#</p>
+          <p>React</p>
+          <p>React Native</p>
+          <p>Qt</p>
+          <p>Angular</p>
+          <p>Github</p>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>AlexGioffre©<span id="date"></span></p>
+
+      <a
+        class="link-social"
+        target="_blank"
+        href="https://github.com/AlexGioffDev"
+        >Github</a
+      >
+    </footer>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
